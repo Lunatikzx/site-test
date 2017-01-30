@@ -26,7 +26,7 @@ $right = false;
 
 get_header(); ?>
 <section class="main_content">
-
+  <pre>ceci est un exemple de changement</pre>
     <?php
         while( $my_sections->have_posts() ) : $my_sections->the_post();
     ?>
