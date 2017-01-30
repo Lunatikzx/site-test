@@ -1,0 +1,58 @@
+/*! responsive-nav.js 1.0.32 by @viljamis */
+
+.nav-collapsed ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.js .nav-collapsed {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapsed.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  border-bottom: 1px solid #182732;
+  color: #cfcfcf;
+  background-color: #3b434d;
+  font-weight: 800;
+  display:block;
+  text-align: center;
+  padding: 10px 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.nav-toggle:hover{
+  text-decoration:none;
+  color: #cfcfcf; 
+}
+@media screen and (min-width: 776px) {
+  .js .nav-collapsed {
+    position: relative;
+  }
+  .js .nav-collapsed.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

@@ -1,0 +1,191 @@
+@grisbleute : #3b434d;
+@green:#56FF00;
+@grispale : #cfcfcf; 
+@orange : #ff7d00;
+@deepblue : #182732;
+@indigo : #0c161c;
+@footer-height: 300px;
+@blanc: #fff;
+@open : 'Open Sans', sans-serif;
+@roboto: 'Roboto', sans-serif;
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @open;
+}
+.h1{
+    font-size: 3em;
+    margin:0!important;
+}
+html, body{
+    height: 100%;
+}
+body{
+    background-color: @blanc;
+    color:@indigo;
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+       -moz-animation: fadein 2s; /* Firefox */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera */
+            animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Header */
+#top{
+    background:#182732 url(../images/profil.jpg) -120px -200px no-repeat fixed;
+    color: @blanc;
+    padding:15px 0;
+    text-shadow:1px 1px 1px @indigo;
+    &:hover{
+        text-decoration: none; 
+        color:@blanc;
+    }
+    p{
+        font-size: 1.5em;
+    }
+    a, h1{
+        font-family: @roboto;
+        font-weight: 300;
+        text-decoration: none; 
+        color:@blanc;
+    }
+}
+
+/* Article */
+.main_content{
+    div{
+        padding: 0 0 0 20px;
+    }
+    article {
+        text-align: justify; 
+        font-family: @open;
+        margin:10px 0 25px 0;
+
+        h2{
+            color:@orange;
+            font-size: 1.2em;
+            font-weight:700;
+            padding-right:10px;
+            @media (max-width:568px) {
+                font-size:1em;
+            }
+        }
+        .img_post{
+            min-height: 50px;
+            width:100%;
+        }
+        .profil{
+            background:#182732 url(../images/profil.jpg) -120px -200px no-repeat fixed;
+            box-shadow: 2px 2px 2px 0 @indigo inset;
+        }
+        div{
+            padding: 10px 10px 0 0;
+            margin:  0 0 10px 0;
+        }
+        .aside{
+            font-size: 0.8em;
+            padding: 10px  10px 0 10px;
+            border-left: 1px dashed @orange;
+        }
+        img{
+            padding: 10px 0;
+            margin: 0 auto;
+        }
+    }
+    h1{
+        font-family: @roboto;
+
+        border-bottom: solid 1px @grispale;
+        padding: 10px 0;
+        font-weight: 100;
+        font-size: 2.5em;
+        margin-right:10px;
+    }
+    .contentwrapper.right{
+        background: @indigo url(../images/profil-blue.jpg) -120px -200px no-repeat fixed;
+        color:@grispale;
+            text-align:right; 
+        h1{
+            color: @green;
+            border-bottom:1px solid @green;
+        }
+        h2{
+            color:@orange;
+        }
+    }
+}
+.test{
+    min-height:200px;
+    background-color: @indigo;
+}
+/*General styles*/
+.centered{
+    text-align:center;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.nav-toggle{
+    margin:0 auto;
+    box-shadow:0 2px 1px 0 @indigo;
+}
+
+.main_nav{
+    background-color: @grisbleute;
+    font-family: @roboto;
+    font-weight:100;
+    color:@grispale;
+    box-shadow:0 2px 1px 0 @indigo;
+    ul{
+        li{
+            color:@grispale;
+            :hover{
+                font-weight:100;
+                transition: background-color 0.7s ease;
+                background-color:@deepblue;
+            }
+            :hover,:active,:link,:visited{
+                color:@grispale;
+            }
+        }
+    }
+}
+
+/* Footer */
+.bottom{
+    color:@blanc;
+    height: @footer-height;
+    background-color: @indigo;
+    padding: 10px;
+    margin-top:30px;
+    border-top:1px solid @orange;
+    h1{
+        font-family: @roboto;
+        font-weight:100;
+    }
+    section{
+        padding-right: 10px;
+        .social{
+            a{
+                color: @grispale;
+            }
+        }
+    }
+}
